@@ -1,0 +1,68 @@
+1668424482566	geckodriver	INFO	Listening on 127.0.0.1:60312
+1668424485633	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60313" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\rust_mozprofile0hrs5u"
+1668424486502	Marionette	INFO	Marionette enabled
+1668424486509	Marionette	INFO	Listening on port 60335
+Read port: 60335
+WebDriver BiDi listening on ws://127.0.0.1:60313
+1668424486683	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Lenovo\\AppData\\Local\\Temp\\rust_mozprofile0hrs5u\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60313/devtools/browser/66898598-2267-471c-9ab9-346832df40c5
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 307: NS_ERROR_FAILURE: Should pass a non-null uri
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+1668424502441	Marionette	INFO	Stopped listening on port 60335
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+1668424593465	geckodriver	INFO	Listening on 127.0.0.1:56003
+1668424596520	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56004" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\rust_mozprofile2FTeQJ"
+1668424597380	Marionette	INFO	Marionette enabled
+1668424597389	Marionette	INFO	Listening on port 56021
+Read port: 56021
+WebDriver BiDi listening on ws://127.0.0.1:56004
+1668424597569	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Lenovo\\AppData\\Local\\Temp\\rust_mozprofile2FTeQJ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56004/devtools/browser/4e6479d5-aec3-49a9-87a7-45b2008089de
+1668424602792	Marionette	INFO	Stopped listening on port 56021
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+1668424636219	geckodriver	INFO	Listening on 127.0.0.1:56102
+1668424639265	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56103" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\rust_mozprofileaYzRLG"
+1668424639698	Marionette	INFO	Marionette enabled
+1668424639703	Marionette	INFO	Listening on port 56121
+Read port: 56121
+WebDriver BiDi listening on ws://127.0.0.1:56103
+1668424639818	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Lenovo\\AppData\\Local\\Temp\\rust_mozprofileaYzRLG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56103/devtools/browser/15c9a46d-9452-491f-bb20-c655a8a942c9
+JavaScript error: https://a.pub.network/whatismyipaddress-com/pubfig.min.js, line 1: TypeError: n is undefined
+1668424657434	Marionette	INFO	Stopped listening on port 56121
+1668424691049	geckodriver	INFO	Listening on 127.0.0.1:56313
+1668424694095	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56314" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\rust_mozprofileuvZAbm"
+1668424694621	Marionette	INFO	Marionette enabled
+1668424694626	Marionette	INFO	Listening on port 56335
+Read port: 56335
+WebDriver BiDi listening on ws://127.0.0.1:56314
+1668424694742	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Lenovo\\AppData\\Local\\Temp\\rust_mozprofileuvZAbm\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56314/devtools/browser/5cc5a92b-4f69-4035-a6bb-ef31a6ff3adb
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 307: NS_ERROR_FAILURE: Should pass a non-null uri
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+JavaScript error: https://whatismyipaddress.com/wp-content/plugins/svg-support/js/min/svgs-inline-min.js?ver=1.0.0, line 1: ReferenceError: frontSanitizationEnabled is not defined
+JavaScript error: https://whatismyipaddress.com/wp-content/plugins/svg-support/js/min/svgs-inline-min.js?ver=1.0.0, line 1: ReferenceError: frontSanitizationEnabled is not defined
+JavaScript error: https://whatismyipaddress.com/wp-content/plugins/svg-support/js/min/svgs-inline-min.js?ver=1.0.0, line 1: ReferenceError: frontSanitizationEnabled is not defined
+JavaScript error: https://a.pub.network/whatismyipaddress-com/pubfig.min.js, line 1: TypeError: n is undefined
+1668424712146	Marionette	INFO	Stopped listening on port 56335
+1668424754535	geckodriver	INFO	Listening on 127.0.0.1:56555
+1668424757603	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56556" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\rust_mozprofileZmzGs2"
+1668424758076	Marionette	INFO	Marionette enabled
+1668424758081	Marionette	INFO	Listening on port 56574
+Read port: 56574
+WebDriver BiDi listening on ws://127.0.0.1:56556
+1668424758230	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Lenovo\\AppData\\Local\\Temp\\rust_mozprofileZmzGs2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56556/devtools/browser/d49e6806-998a-4131-9b53-45ea20b3421d
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+JavaScript error: https://a.pub.network/whatismyipaddress-com/pubfig.min.js, line 1: TypeError: n is undefined
+1668424791083	Marionette	INFO	Stopped listening on port 56574

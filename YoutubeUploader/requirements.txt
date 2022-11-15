@@ -1,0 +1,23 @@
+pip install scrapy
+pip install requests
+pip install json
+pip install glob
+pip install wget
+pip install os
+pip install selenium_youtube
+pip install ytb-up
+pip install nltk
+
+
+# This is your project folder. Inside this folder there are two .py files.
+# 1) browser_user_login.py
+# 2) youtube.py
+
+# when you are running the crawler first time, you don't have the login or any thing. So for login you have to run the browser_user_login first, when you
+# run this file, there is login screen open on the browser. Then you have to enter the login credentials manullay on which account you want to upload videos.
+# After login, youtube studio will open in your browser and you have to make seeting in the account you want to make. Then these settings and all data will save
+# in the folder named userdata, so for the next time when you open youtube studio it will login with the account you entered. So after all this you have to 
+# comment out the last line in the browser_user_login.py file which is login() basically it is function calling, so you have to comment it out. After this you
+# can run youtube.py file and then rest of the things will be done by that script. Youtube.py is the script in which it will crawl the links, download videos,
+# parse title and description, and uploading video. That's it
+# Thanks

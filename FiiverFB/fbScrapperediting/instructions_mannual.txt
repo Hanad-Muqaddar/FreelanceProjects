@@ -1,0 +1,40 @@
+New_functionality.py is the file in which i am send you the code. To integrate this uin your scrapper do the following steps:
+
+1) copy the both of these functions in to your main.py file.
+
+2) copy the last three lines just below the functions.
+
+3) Go to the download_videos function in main.py
+
+4) look for this code in the function
+
+try to find this code in download_videos function under main.py
+
+try:
+    video = driver.find_element(By.XPATH,"//a[@id='hdlink']")
+    # get the src attribute of the video element
+    src = video.get_attribute('href')
+except:
+    video = driver.find_element(By.XPATH, "//a[@id='sdlink']")
+    src = video.get_attribute('href')
+
+5) When you find this code, try to write these 3 lines in that way i show you
+
+try:
+    video = driver.find_element(By.XPATH,"//a[@id='hdlink']")
+    # get the src attribute of the video element
+    src = video.get_attribute('href')
+    likes, comments, views, date, post_link, title = get_facebook_video_post_data(url)
+    data = {'Post_Link' : post_link, "Likes":likes, "Comments":comments, "Views" : views, "Video_Title": title, "Date": date, 'Download_Url':src}
+    post_data_saving(data)
+except:
+    video = driver.find_element(By.XPATH, "//a[@id='sdlink']")
+    src = video.get_attribute('href')
+    likes, comments, views, date, post_link, title = get_facebook_video_post_data(url)
+    data = {'Post_Link' : post_link, "Likes":likes, "Comments":comments, "Views" : views, "Video_Title": title, "Date": date, 'Download_Url':src}
+    post_data_saving(data)
+
+copy this code and replace with above code.
+
+That's all.
+Thanks.

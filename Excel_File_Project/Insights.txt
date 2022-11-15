@@ -1,0 +1,61 @@
+For This week get total
+
+3 : 1 Gallon Regular milk
+8 : 1L Jersey milk
+5 : 1 Gallon Jersey milk
+3 : Cheese
+2 : Butter
+1 : Cream
+16.0 : dozen eggs
+
+For next week order
+
+1 : 1 Gallon Regular milk
+4 : 1L Jersey milk
+7 : 1 Gallon Jersey milk
+4 : Cheese
+7 : Butter
+8 : Cream
+1 : Honey
+1 : Kefir
+13.5 : dozen eggs
+
+
+Jacqueline S , OUTSIDE OF LONDON , 519-319-4465
+	- 2 : 1 Gallon Regular milk
+	- 2 : Cheese
+	- Total Price : $58
+SDMZZZ , 337 St James St London, ON N6A 1X6 , 519-494-3439
+	- 2 : 1L Jersey milk
+	- 1 : Cheese
+	- Total Price : $27
+M Bonaven , 6 Southview Crescent London, ON N6J 3L5 , 705-929-9298
+	- 1 : 1 Gallon Regular milk
+	- Total Price : $20
+Sarah Starrs , 122 Emery St W London, ON N6J 1S1 , 226-582-8321
+	- 1 : 1 Gallon Jersey milk
+	- 1 : Flat Eggs
+	- 1 : Butter
+	- Total Price : $40
+Jesannah , OUTSIDE OF LONDON , 519-495-5956
+	- 3 : 1L Jersey milk
+	- 1 : Flat Eggs
+	- 1 : Butter
+	- 1 : Cream
+	- Total Price : $54
+Rodney Phil , 37 Barker St London, ON N5Y 1X5 , 519-495-5956
+	- 1 : 1 Gallon Jersey milk
+	- 2 : Flat Eggs
+	- Total Price : $40
+Abu Milk , 203 Sunnyside Dr London, ON N5X 3P9 , 647-835-8246
+	- 2 : 1 Gallon Jersey milk
+	- 1 : Flat Eggs
+	- Total Price : $53
+Lindsay Lowry , 31 Falaise Rd London, ON N5Y 2C9 , 226-218-2997
+	- 3 : 1L Jersey milk
+	- 1 : Dozen Eggs
+	- Total Price : $31
+Caroline Stelzner , 31 Falaise Rd London, ON N5Y 2C9 , 226-218-2997
+	- 1 : 1 Gallon Jersey milk
+	- 1 : Flat Eggs
+	- Total Price : $31

@@ -1,0 +1,7 @@
+[22056:3876:1003/124034.746:ERROR:device_event_log_impl.cc(214)] [12:40:34.746] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[22056:3876:1003/124034.747:ERROR:device_event_log_impl.cc(214)] [12:40:34.748] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[22056:3876:1003/124034.810:ERROR:device_event_log_impl.cc(214)] [12:40:34.811] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+[22056:28976:1003/124036.642:WARNING:page_discarding_helper.cc(155)] Urgently discarding multiple pages with target (kb): 0
+[22056:3876:1003/124043.455:INFO:CONSOLE(6789)] "crbug/1173575, non-JS module files deprecated.", source: chrome-error://chromewebdata/ (6789)
+[22056:3876:1003/124046.228:INFO:CONSOLE(6789)] "crbug/1173575, non-JS module files deprecated.", source: chrome-error://chromewebdata/ (6789)
+[22056:3876:1003/124049.614:INFO:CONSOLE(6789)] "crbug/1173575, non-JS module files deprecated.", source: chrome-error://chromewebdata/ (6789)
