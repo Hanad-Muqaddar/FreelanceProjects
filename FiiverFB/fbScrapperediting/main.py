@@ -44,6 +44,7 @@ def post_data_saving(data):
         dictwriter_object = DictWriter(f_object, fieldnames=field_names)
         dictwriter_object.writerow(data)
         f_object.close()
+
 def extracting_comments(response):
     a = [1,2,3,4,5,6,7,8,9]
     b = [1,2,3]

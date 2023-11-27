@@ -1,0 +1,15 @@
+[3068:8952:1121/232707.495:INFO:CONSOLE(0)] "Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: chrome://resources/roboto/roboto-regular.woff2", source: chrome://new-tab-page/ (0)
+[3068:8952:1121/232707.594:WARNING:CONSOLE(1)] "Unrecognized feature: '
+'.", source: chrome://resources/polymer/v3_0/polymer/polymer_bundled.min.js (1)
+[3068:8952:1121/232708.110:INFO:CONSOLE(0)] "Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: chrome://resources/roboto/roboto-medium.woff2", source: chrome://new-tab-page/ (0)
+[3068:8952:1121/232710.730:INFO:CONSOLE(228)] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/JFi2f1xHgZ4.js?_nc_x=PSJCvwkq2vP&_nc_eui2=AeGpOjeKB5Bjp9JCnFYjmUgCqMUcwCKrqYWoxRzAIquphYl3bGnGIBeyq9-xFa57FDf7ZID-wrZTGujHLuZIn9no (228)
+[3068:8952:1121/232710.732:INFO:CONSOLE(228)] "
+%cThis is a browser feature intended for developers. If someone told you to copy and paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/JFi2f1xHgZ4.js?_nc_x=PSJCvwkq2vP&_nc_eui2=AeGpOjeKB5Bjp9JCnFYjmUgCqMUcwCKrqYWoxRzAIquphYl3bGnGIBeyq9-xFa57FDf7ZID-wrZTGujHLuZIn9no (228)
+[3068:8952:1121/232710.732:INFO:CONSOLE(228)] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/JFi2f1xHgZ4.js?_nc_x=PSJCvwkq2vP&_nc_eui2=AeGpOjeKB5Bjp9JCnFYjmUgCqMUcwCKrqYWoxRzAIquphYl3bGnGIBeyq9-xFa57FDf7ZID-wrZTGujHLuZIn9no (228)
+[3068:8952:1121/232710.732:INFO:CONSOLE(228)] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/JFi2f1xHgZ4.js?_nc_x=PSJCvwkq2vP&_nc_eui2=AeGpOjeKB5Bjp9JCnFYjmUgCqMUcwCKrqYWoxRzAIquphYl3bGnGIBeyq9-xFa57FDf7ZID-wrZTGujHLuZIn9no (228)
+[3068:8952:1121/232713.764:ERROR:device_event_log_impl.cc(215)] [23:27:13.764] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[3068:8952:1121/232713.765:ERROR:device_event_log_impl.cc(215)] [23:27:13.764] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[3068:8952:1121/232718.085:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

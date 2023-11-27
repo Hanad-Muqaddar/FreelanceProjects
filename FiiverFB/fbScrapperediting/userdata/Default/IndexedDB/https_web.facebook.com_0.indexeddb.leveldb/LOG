@@ -1,0 +1,7 @@
+2022/11/21-23:27:10.647 398c Reusing MANIFEST D:\DestopFolder\Five_Proj\FiiverFB\fbScrapperediting\userdata\Default\IndexedDB\https_web.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/11/21-23:27:10.647 398c Recovering log #3
+2022/11/21-23:27:10.647 398c Reusing old log D:\DestopFolder\Five_Proj\FiiverFB\fbScrapperediting\userdata\Default\IndexedDB\https_web.facebook.com_0.indexeddb.leveldb/000003.log 
+2022/11/21-23:27:14.811 2c0c Level-0 table #5: started
+2022/11/21-23:27:14.813 2c0c Level-0 table #5: 536 bytes OK
+2022/11/21-23:27:14.814 2c0c Delete type=0 #3
+2022/11/21-23:27:14.814 2c0c Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

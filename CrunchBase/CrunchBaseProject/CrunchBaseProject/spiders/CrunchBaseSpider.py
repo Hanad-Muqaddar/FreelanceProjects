@@ -1,4 +1,5 @@
 import scrapy
+from ..cleaning import clean
 
 
 class CrunchbasespiderSpider(scrapy.Spider):
@@ -21,16 +22,17 @@ class CrunchbasespiderSpider(scrapy.Spider):
         item['Operating_Status'] = response.xpath('normalize-space(((//section-card[@class="ng-star-inserted"])[4]//li)[5]//field-formatter)').get()
         item['Last_Funding_Type'] = response.xpath('normalize-space(((//section-card[@class="ng-star-inserted"])[4]//li)[6]//field-formatter)').get()
         item['Legal_Name'] = response.xpath('normalize-space(((//section-card[@class="ng-star-inserted"])[4]//li)[7]//field-formatter)').get()
-        item['Company_Type'] = response.xpath('normalize-space(((//section-card[@class="ng-star-inserted"])[4]//li)[8]//field-formatter)').get()
+        # item['Company_Type'] = response.xpath('normalize-space(((//section-card[@class="ng-star-inserted"])[4]//li)[8]//field-formatter)').get()
         item['Contact_Email'] = response.xpath('normalize-space(((//section-card[@class="ng-star-inserted"])[4]//li)[9]//field-formatter)').get()
         item['Phone_Number'] = response.xpath('normalize-space(((//section-card[@class="ng-star-inserted"])[4]//li)[10]//field-formatter)').get()
         item['Description'] = response.xpath('normalize-space((//section-card[@class="ng-star-inserted"])[4]//description-card)').get()
         
         next_url = "https://www.crunchbase.com/organization/ecovative-designs/company_financials"
-        yield scrapy.Request(url=next_url, callback=self.parse_financial)
+        yield scrapy.Request(url=next_url, callback=self.parse_financial, meta={'item' : item})
 
 
     def parse_financial(self, response):
+        above__meta_data_1 =  response.meta.get("item")
         item = {}
         item['Financial_Url'] = response.url
         item['Lead_Investment'] = self.parse_lead_investments(response)
@@ -43,13 +45,38 @@ class CrunchbasespiderSpider(scrapy.Spider):
         item['Investors_Detail'] = self.parse_investors_details(response)
         
         next_url = "https://www.crunchbase.com/organization/ecovative-designs/org_similarity_overview"
-        yield scrapy.Request(url=next_url, callback=self.parse_similar_companies)
+        yield scrapy.Request(url=next_url, callback=self.parse_similar_companies, meta = {"item1": above__meta_data_1, "item2" : item})
     
     
     def parse_similar_companies(self, response):
+        
         item = {}
+        item['Comapny_Url'] = response.meta.get("item1")['Comapny_Url']
+        item['Address'] = response.meta.get("item1")['Address']
+        item['Number_Of_Employess'] = response.meta.get("item1")['Number_Of_Employess']
+        item['Company_Website'] = response.meta.get("item1")['Company_Website']
+        item['Company_Type'] = response.meta.get("item1")['Company_Type']
+        item['Industries'] = response.meta.get("item1")['Industries']
+        item['Headquarters_Regions'] = response.meta.get("item1")['Headquarters_Regions']
+        item['Founded_Date'] = response.meta.get("item1")['Founded_Date']
+        item['Founders'] = response.meta.get("item1")['Founders']
+        item['Operating_Status'] = response.meta.get("item1")['Operating_Status']
+        item['Last_Funding_Type'] = response.meta.get("item1")['Last_Funding_Type']
+        item['Legal_Name'] = response.meta.get("item1")['Legal_Name']
+        item['Contact_Email'] = response.meta.get("item1")['Contact_Email']
+        item['Phone_Number'] = response.meta.get("item1")['Phone_Number']
+        item['Description'] = response.meta.get("item1")['Description']
+        item['Financial_Url'] = response.meta.get("item2")['Financial_Url']
+        item['Lead_Investment'] = response.meta.get("item2")['Lead_Investment']
+        item['Investments'] = response.meta.get("item2")['Investments']
+        item['Funding_Round'] = response.meta.get("item2")['Funding_Round']
+        item['Total_Funding_Amount'] = response.meta.get("item2")['Total_Funding_Amount']
+        item['Lead_Investors'] = response.meta.get("item2")['Lead_Investors']
+        item['Investors'] = response.meta.get("item2")['Investors']
+        item['Funding_Rounds_Details'] = response.meta.get("item2")['Funding_Rounds_Details']
+        item['Investors_Detail'] = response.meta.get("item2")['Investors_Detail']
         item['Similar_Companies_Page_Url'] = response.url
-        item['Similar_Companies'] = self.parse_similar_comp(response) 
+        item['Similar_Companies'] = self.parse_similar_comp(response)
         yield  item   
     
     
@@ -95,8 +122,8 @@ class CrunchbasespiderSpider(scrapy.Spider):
                 dict_item['Number_Of_Investors_Url'] = self.BASE_URL + i.xpath("(.//td)[3]//a/@href").get()
             except:
                 dict_item['Number_Of_Investors_Url'] = ""
-            dict_item['Money_Raised'] = i.xpath("normalize-space((.//td//field-formatter)[4])").get()
-            dict_item['Lead_Investors'] = i.xpath("normalize-space((.//td//field-formatter)[5])").get()
+            dict_item['Money_Raised'] = clean(i.xpath("normalize-space((.//td//field-formatter)[4])").get())
+            dict_item['Lead_Investors'] = clean(i.xpath("normalize-space((.//td//field-formatter)[5])").get())
             try:
                 dict_item['Lead_Investors_Url'] = self.BASE_URL + i.xpath("(.//td)[5]//a/@href").get()
             except:
@@ -114,13 +141,13 @@ class CrunchbasespiderSpider(scrapy.Spider):
                 dict_item['Investor_Name_Url'] = self.BASE_URL + i.xpath("(.//td)[1]//a/@href").get()
             except:
                 dict_item['Investor_Name_Url'] = ""
-            dict_item['Lead_Investor'] = i.xpath("normalize-space((.//td//field-formatter)[2])").get()
-            dict_item['Funding_Round'] = i.xpath("normalize-space((.//td//field-formatter)[3])").get()
+            dict_item['Lead_Investor'] = clean(i.xpath("normalize-space((.//td//field-formatter)[2])").get())
+            dict_item['Funding_Round'] = clean(i.xpath("normalize-space((.//td//field-formatter)[3])").get())
             try:
                 dict_item['Funding_Round_Url'] = self.BASE_URL + i.xpath("(.//td)[3]//a/@href").get()
             except:
                 dict_item['Funding_Round_Url'] = ""
-            dict_item['Partners'] = i.xpath("normalize-space((.//td//field-formatter)[4])").get()
+            dict_item['Partners'] = clean(i.xpath("normalize-space((.//td//field-formatter)[4])").get())
             try:
                 dict_item['Partners_Url'] = self.BASE_URL + i.xpath("(.//td)[4]//a/@href").get()
             except:

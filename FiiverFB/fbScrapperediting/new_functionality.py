@@ -23,6 +23,7 @@ def get_facebook_video_post_data(url):
     driver = driver_return()
     driver.maximize_window()
     driver.get(url)
+    time.sleep(600)
     time.sleep(3)
     response = Selector(text = driver.page_source.encode('utf-8'))
     time.sleep(3)
@@ -41,10 +42,25 @@ def get_facebook_video_post_data(url):
         number_of_comments = ""
     elif "views" in number_of_views.lower():
         pass
-    return number_of_likes, number_of_comments, number_of_views, video_post_date, url, video_title
+    print(number_of_likes)
+    print(number_of_comments)
+    print(number_of_views)
+    data = {'Post_Link' : url, "Likes":number_of_likes, "Comments":number_of_comments, "Views" : number_of_views, "Video_Title": video_title, "Date": video_post_date}
+    return data
+
+
+url = "https://web.facebook.com/JacobReesMogg/videos/234910231990171/?_rdc=1&_rdr"
+data = get_facebook_video_post_data(url)
+print("********************************")
+print("********************************")
+print(data['Post_Link'])
+print(data['Likes'])
+print(data['Comments'])
+print(data['Views'])
+print(data['Video_Title'])
+print(data['Date'])
+print("********************************")
+print("********************************")
 
 
 
-likes, comments, views, date, post_link, title = get_facebook_video_post_data(url)
-data = {'Post_Link' : post_link, "Likes":likes, "Comments":comments, "Views" : views, "Video_Title": title, "Date": date, 'Download_Url':src}
-post_data_saving(data)

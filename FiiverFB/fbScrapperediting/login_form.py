@@ -90,7 +90,7 @@ def driver_return():
 # driver.get("https://web.facebook.com/")
 # try:
 #     email = driver.find_element(By.XPATH, '//input[@name="email"]')
-#     email.send_keys("testing92098612@gmail.com")
+#     email.send_keys("metadeveloperfb@gmail.com")
 #     password = driver.find_element(By.XPATH, '//input[@name="pass"]')
 #     password.send_keys('Password123@')
 #     # login_button = driver.find_element(By.XPATH, '//a[@aria-label="Log in"]')

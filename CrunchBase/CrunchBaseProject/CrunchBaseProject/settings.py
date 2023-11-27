@@ -18,8 +18,8 @@ USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Ge
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
-FEED_FORMAT = "json"
-FEED_URI = "CrunchBase.json"
+FEED_FORMAT = "csv"
+FEED_URI = "CrunchBase.csv"
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 

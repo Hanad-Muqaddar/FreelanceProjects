@@ -1,10 +1,13 @@
-from scrapy.utils.project import get_project_settings
+from scrapy.crawler import CrawlerProcess
 import scrapy
 import json
+import time
+import os
+
 
 class InstagramspiderSpider(scrapy.Spider):
-    settings=get_project_settings()
     name = 'InstagramSpider'
+
     def start_requests(self):
         headers = {
                     'authority': 'www.instagram.com',
@@ -22,7 +25,7 @@ class InstagramspiderSpider(scrapy.Spider):
                     'x-csrftoken': 'ps9ENLEa0uq5XJYjEzbzPGNFTUMi4I1t',
                     'x-ig-app-id': '936619743392459'
                 }
-        usernames = ['nike']
+        usernames = ['adidas']
         for username in usernames:
             url = f"https://www.instagram.com/api/v1/users/web_profile_info/?username={username}"
             yield scrapy.Request(url=url, headers=headers, callback=self.parse)
@@ -35,6 +38,7 @@ class InstagramspiderSpider(scrapy.Spider):
         item['Total Videos'] = data['data']['user']['edge_felix_video_timeline']['count']
         item['Followers'] = data['data']['user']['edge_followed_by']['count']
         item['Following'] = data['data']['user']['edge_follow']['count']
+        item['HashTags'] = self.parse_hash_tags(response)
         if data['data']['user']['is_business_account']:
             item['Business or Personal'] = "Business"
         else:
@@ -46,6 +50,16 @@ class InstagramspiderSpider(scrapy.Spider):
         item['Videos_Data'] = self.parse_videos_data(response)
         item['Images'] = self.parse_images_data(response)
         yield item
+    
+        
+    def parse_hash_tags(self, response):
+        data = json.loads(response.body)
+        hash_tags_data = data['data']['user']['biography_with_entities']['entities']
+        hashtags = []
+        for tag in hash_tags_data:
+            hashtags.append(tag['hashtag']['name'])
+        return hashtags
+
     
     def parse_videos_data(self, response):
         data = json.loads(response.body)
@@ -60,6 +74,10 @@ class InstagramspiderSpider(scrapy.Spider):
                         it['video_url'] = vid['node']['video_url']
                     except:
                         it['video_url'] = ""
+                    try:
+                        it['Post_Url'] = "https://www.instagram.com/p/" + vid['node']['shortcode'] + "/"
+                    except:
+                        it['Post_Url'] = ""
                     try:
                         it['video_views_count'] = vid['node']['video_view_count']
                     except:
@@ -77,7 +95,6 @@ class InstagramspiderSpider(scrapy.Spider):
                     except:
                         it['video_duration'] = ""
                     videos_list.append(it)
-        # https://www.instagram.com/graphql/query/?query_hash=
         return videos_list
     
     def parse_images_data(self, response):
@@ -94,6 +111,26 @@ class InstagramspiderSpider(scrapy.Spider):
                     for image in images_container:
                         im = {}
                         im['Image_Url'] = image['node']['display_url']
+                        im['PostUrl'] = "https://www.instagram.com/p/"+image['node']['shortcode'] + "/"
                         images_list.append(im)
         return images_list
+
+def return_json_object():
+    path = "D:/DestopFolder/Five_Proj/InstagramScrapper/Instagram"
+    with open(f'{path}/Insta.json') as f:
+        data = json.load(f)
+    os.remove(f'{path}/Insta.json')
+    return data
     
+if __name__ == '__main__':
+
+    process = CrawlerProcess(settings={
+        "FEEDS": {
+            "Insta.json": {"format": "json"},
+        },
+    })
+    process.crawl(InstagramspiderSpider)
+    process.start()
+    time.sleep(3)
+    josn_data = return_json_object()
+    print(josn_data)
